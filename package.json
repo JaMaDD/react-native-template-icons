@@ -1,0 +1,133 @@
+{
+  "name": "@jamadd/react-native-template-icons",
+  "version": "0.1.0",
+  "description": "React Native Template Icons is a collection of icons designed by JaMa D&D.",
+  "source": "./src/index.ts",
+  "main": "./lib/commonjs/index.js",
+  "module": "./lib/module/index.js",
+  "types": "./lib/typescript/commonjs/src/index.d.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./lib/typescript/module/src/index.d.ts",
+        "default": "./lib/module/index.js"
+      },
+      "require": {
+        "types": "./lib/typescript/commonjs/src/index.d.ts",
+        "default": "./lib/commonjs/index.js"
+      }
+    }
+  },
+  "files": [
+    "src",
+    "lib",
+    "glyphmaps",
+    "fonts",
+    "android",
+    "ios",
+    "cpp",
+    "*.podspec",
+    "!ios/build",
+    "!android/build",
+    "!android/gradle",
+    "!android/gradlew",
+    "!android/gradlew.bat",
+    "!android/local.properties",
+    "!**/__tests__",
+    "!**/__fixtures__",
+    "!**/__mocks__",
+    "!**/.*"
+  ],
+  "scripts": {
+    "clean": "del-cli android/build ios/build lib",
+    "prepare": "bob build && ./scripts/fix-glyphmaps.sh",
+    "watch": "onchange 'src/**' --initial -- pnpm prepare",
+    "generate": "yo react-native-vector-icons && node scripts/postGenerate.js",
+    "release-bump": "node scripts/bumpVersion.js",
+    "release-commit": "git add . && git commit -m \"v${npm_package_version}\" && git tag v${npm_package_version} && git push origin main --tags",
+    "release-major": "pnpm release-bump major && pnpm release-commit",
+    "release-minor": "pnpm release-bump minor && pnpm release-commit",
+    "release-patch": "pnpm release-bump patch && pnpm release-commit"
+  },
+  "keywords": [
+    "@jamadd/react-native-template-icons",
+    "react-native",
+    "ios",
+    "android",
+    "web",
+    "osx",
+    "windows",
+    "macos",
+    "react-component",
+    "react-native-component",
+    "react",
+    "mobile",
+    "ui",
+    "icon",
+    "icons",
+    "vector",
+    "retina",
+    "font",
+    "react-native-vector-icons-icon"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JaMaDD/ReactNativeTemplateIcons.git"
+  },
+  "author": "JaMaD&D <jameswaitingontheday@gmail.com> (https://reactnativetemplate.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/JaMaDD/ReactNativeTemplateIcons/issues"
+  },
+  "homepage": "https://github.com/JaMaDD/ReactNativeTemplateIcons#readme",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
+    "access": "public"
+  },
+  "dependencies": {
+    "@react-native-vector-icons/common": "12.3.0"
+  },
+  "devDependencies": {
+    "@types/react": "^19.1.0",
+    "del-cli": "^6.0.0",
+    "onchange": "^7.1.0",
+    "react-native-builder-bob": "^0.35.2",
+    "typescript": "^5.7.2"
+  },
+  "peerDependencies": {
+    "react": "*",
+    "react-native": "*"
+  },
+  "engines": {
+    "node": ">= 18.0.0"
+  },
+  "react-native-builder-bob": {
+    "source": "src",
+    "output": "lib",
+    "targets": [
+      [
+        "commonjs",
+        {
+          "esm": true
+        }
+      ],
+      [
+        "module",
+        {
+          "esm": true
+        }
+      ],
+      [
+        "typescript",
+        {
+          "project": "tsconfig.build.json",
+          "esm": true
+        }
+      ]
+    ]
+  },
+  "create-react-native-library": {
+    "type": "library",
+    "version": "0.41.2"
+  }
+}

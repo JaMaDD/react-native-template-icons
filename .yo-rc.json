@@ -1,0 +1,15 @@
+{
+  "generator-react-native-vector-icons": {
+    "packageName": "react-native-template-icons",
+    "upstreamPackageName": "@jamadd/react-native-template-icons",
+    "buildSteps": {
+      "glyphmap": {
+        "mode": "css",
+        "prefix": "icon-",
+        "location": "fonts/reactnativetemplateicons.css",
+        "cleanup": true
+      }
+    },
+    "versions": [{ "rnvi": "12.3.0", "upstream": "0.1.0" }]
+  }
+}
