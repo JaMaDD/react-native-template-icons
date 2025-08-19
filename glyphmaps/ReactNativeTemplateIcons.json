@@ -1,7 +1,15 @@
 {
-  "close": 59392,
-  "exclamationmark": 59393,
-  "questionmark": 59394,
-  "tick": 59395,
-  "info": 59396
+  "cross": 59392,
+  "down": 59393,
+  "info": 59394,
+  "gear": 59395,
+  "left": 59396,
+  "moon": 59397,
+  "exclamationmark": 59398,
+  "questionmark": 59399,
+  "reactnativetemplate": 59400,
+  "right": 59401,
+  "sun": 59402,
+  "tick": 59403,
+  "up": 59404
 }

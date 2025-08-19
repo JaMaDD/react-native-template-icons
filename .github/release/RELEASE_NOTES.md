@@ -1,13 +1,33 @@
 ## What's Changed
 
-### Added Icons
+### 🎉 Added Icons
+
+- `cross`
+
+- `down`
+
+- `gear`
+
+- `left`
+
+- `moon`
+
+- `reactnativetemplate`
+
+- `right`
+
+- `sun`
+
+- `up`
+
+### ✏️ Modified Icons
+
+- `info`
 
 - `exclamationmark`
 
 - `questionmark`
 
-- `tick`
-
-- `info`
+### ❌ Removed Icons
 
 - `close`
