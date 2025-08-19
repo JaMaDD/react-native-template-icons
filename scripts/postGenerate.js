@@ -26,19 +26,19 @@ const removedIcons = oldConfigGlyphs.filter(
 
 const changes = ["## What's Changed\n"];
 if (addedIcons.length > 0) {
-  changes.push("### Added Icons\n");
+  changes.push("### 🎉 Added Icons\n");
   addedIcons.forEach(({ css }) => {
     changes.push(`- \`${css}\`\n`);
   });
 }
 if (modifiedIcons.length > 0) {
-  changes.push("### Modified Icons\n");
+  changes.push("### ✏️ Modified Icons\n");
   modifiedIcons.forEach(({ css }) => {
     changes.push(`- \`${css}\`\n`);
   });
 }
 if (removedIcons.length > 0) {
-  changes.push("### Removed Icons\n");
+  changes.push("### ❌ Removed Icons\n");
   removedIcons.forEach(({ css }) => {
     changes.push(`- \`${css}\`\n`);
   });
