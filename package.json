@@ -1,6 +1,6 @@
 {
   "name": "@jamadd/react-native-template-icons",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "React Native Template Icons is a collection of icons designed by JaMa D&D.",
   "source": "./src/index.ts",
   "main": "./lib/commonjs/index.js",
