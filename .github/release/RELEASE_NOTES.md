@@ -2,32 +2,12 @@
 
 ### 🎉 Added Icons
 
-- `cross`
+- `audio`
 
-- `down`
+- `in`
 
-- `gear`
+- `out`
 
-- `left`
+- `scroll`
 
-- `moon`
-
-- `reactnativetemplate`
-
-- `right`
-
-- `sun`
-
-- `up`
-
-### ✏️ Modified Icons
-
-- `info`
-
-- `exclamationmark`
-
-- `questionmark`
-
-### ❌ Removed Icons
-
-- `close`
+- `video`
