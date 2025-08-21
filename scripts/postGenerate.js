@@ -12,17 +12,19 @@ try {
 const newConfigGlyphs = JSON.parse(
   fs.readFileSync(path.join(__dirname, "../fonts/config.json"), "utf8")
 ).glyphs;
-const addedIcons = newConfigGlyphs.filter(
-  ({ css }) => !oldConfigGlyphs.some((glyph) => glyph.css === css)
-);
-const modifiedIcons = newConfigGlyphs.filter(({ css, svg: { path } }) => {
-  const oldGlyph = oldConfigGlyphs.find((glyph) => glyph.css === css);
+const addedIcons = newConfigGlyphs
+  .filter(({ css }) => !oldConfigGlyphs.some((glyph) => glyph.css === css))
+  .sort((a, b) => a.css.localeCompare(b.css));
+const modifiedIcons = newConfigGlyphs
+  .filter(({ css, svg: { path } }) => {
+    const oldGlyph = oldConfigGlyphs.find((glyph) => glyph.css === css);
 
-  return oldGlyph && oldGlyph.svg.path !== path;
-});
-const removedIcons = oldConfigGlyphs.filter(
-  ({ css }) => !newConfigGlyphs.some((glyph) => glyph.css === css)
-);
+    return oldGlyph && oldGlyph.svg.path !== path;
+  })
+  .sort((a, b) => a.css.localeCompare(b.css));
+const removedIcons = oldConfigGlyphs
+  .filter(({ css }) => !newConfigGlyphs.some((glyph) => glyph.css === css))
+  .sort((a, b) => a.css.localeCompare(b.css));
 
 const changes = ["## What's Changed\n"];
 if (addedIcons.length > 0) {
