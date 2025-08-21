@@ -2,12 +2,22 @@
 
 ### 🎉 Added Icons
 
-- `audio`
+- `expand`
 
-- `in`
+- `backward`
+
+- `pause`
+
+- `shrink`
+
+- `play`
+
+- `forward`
+
+### ✏️ Modified Icons
 
 - `out`
 
-- `scroll`
+- `reactnativetemplate`
 
-- `video`
+- `in`
