@@ -11,6 +11,7 @@
 
 import { createIconSet } from "@react-native-vector-icons/common";
 
+import type { ComponentProps } from "react";
 import glyphMap from "../glyphmaps/ReactNativeTemplateIcons.json";
 
 export const Icon = createIconSet(glyphMap, {
@@ -30,6 +31,8 @@ export enum IconSize {
   XL = 42,
   XXL = 48,
 }
+
+export type IconProps = ComponentProps<typeof Icon>;
 
 /** @alias */
 export default Icon;
