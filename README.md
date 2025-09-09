@@ -1,12 +1,12 @@
 # React Native Template Icons
 
-React Native Template Icons is a collection of icons designed by JaMa D&D.
+React Native Template Icons is a collection of icons designed by **JaMa D&D**.
 
 ## Features
 
 - Comprehensive icon set
-- Supports default sizes and custom sizes
-- Customizable colors
+- Supports predefined icon sizes and custom icon sizes
+- Customizable icon colors
 
 ## Installation
 
@@ -25,11 +25,25 @@ npm install @jamadd/react-native-template-icons
 ```js
 import Icon, { IconSize } from "@jamadd/react-native-template-icons";
 
-// Default icon size
-<Icon name="house" color="#ff0000" size={IconSize.S} />;
+// Using predefined icon size
+<Icon name={"reactnativetemplate"} color={"#7ccf6b"} size={IconSize.S} />;
 
-// Custom icon size
-<Icon name="house" color="#ff0000" size={24} />;
+// Using custom icon size
+<Icon name={"reactnativetemplate"} color={"#7ccf6b"} size={24} />;
+```
+
+## Predefined Icon Sizes
+
+```ts
+export enum IconSize {
+  XXS = 12,
+  XS = 18,
+  S = 24,
+  M = 30,
+  L = 36,
+  XL = 42,
+  XXL = 48,
+}
 ```
 
 ## Available Icons
