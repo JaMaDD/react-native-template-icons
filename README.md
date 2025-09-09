@@ -1,6 +1,6 @@
 # React Native Template Icons
 
-React Native Template Icons is a collection of icons designed by **JaMa D&D**.
+**React Native Template Icons** is a collection of icons designed by **JaMa D&D**.
 
 ## Features
 
