@@ -50,6 +50,10 @@ export enum IconSize {
 
 TODO
 
+## Demo Applications
+
+TODO
+
 ## Credits
 
 This package is created using [react-native-vector-icons](https://github.com/oblador/react-native-vector-icons/blob/master/docs/CREATE_FONT_PACKAGE.md) and [Yeoman generator](https://yeoman.io/learning/).
