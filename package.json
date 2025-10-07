@@ -72,14 +72,14 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/JaMaDD/ReactNativeTemplateIcons.git"
+    "url": "git+https://github.com/JaMaDD/react-native-template-icons.git"
   },
   "author": "JaMaD&D <jameswaitingontheday@gmail.com> (https://reactnativetemplate.com)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/JaMaDD/ReactNativeTemplateIcons/issues"
+    "url": "https://github.com/JaMaDD/react-native-template-icons/issues"
   },
-  "homepage": "https://github.com/JaMaDD/ReactNativeTemplateIcons#readme",
+  "homepage": "https://github.com/JaMaDD/react-native-template-icons#readme",
   "publishConfig": {
     "registry": "https://registry.npmjs.org/",
     "access": "public"
