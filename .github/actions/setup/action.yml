@@ -14,6 +14,27 @@ runs:
       run: npm install -g npm@latest
       shell: bash
 
+    - name: Restore dependencies
+      id: yarn-cache
+      uses: actions/cache/restore@v4
+      with:
+        path: |
+          **/node_modules
+          .yarn/install-state.gz
+        key: ${{ runner.os }}-yarn-${{ hashFiles('yarn.lock') }}
+        restore-keys: |
+          ${{ runner.os }}-yarn-
+
     - name: Install dependencies
-      run: yarn install
+      if: steps.yarn-cache.outputs.cache-hit != 'true'
+      run: yarn install --immutable
       shell: bash
+
+    - name: Cache dependencies
+      if: steps.yarn-cache.outputs.cache-hit != 'true'
+      uses: actions/cache/save@v4
+      with:
+        path: |
+          **/node_modules
+          .yarn/install-state.gz
+        key: ${{ steps.yarn-cache.outputs.cache-primary-key }}
