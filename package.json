@@ -79,7 +79,7 @@
   "bugs": {
     "url": "https://github.com/JaMaDD/react-native-template-icons/issues"
   },
-  "homepage": "https://github.com/JaMaDD/react-native-template-icons#readme",
+  "homepage": "https://github.com/JaMaDD/react-native-template-icons",
   "publishConfig": {
     "registry": "https://registry.npmjs.org/",
     "access": "public"
