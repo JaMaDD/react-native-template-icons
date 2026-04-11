@@ -4,13 +4,13 @@ const path = require("path");
 let oldConfigGlyphs = JSON.parse("[]");
 try {
   oldConfigGlyphs = JSON.parse(
-    fs.readFileSync(path.join(__dirname, "../fonts/config_old.json"), "utf8")
+    fs.readFileSync(path.join(__dirname, "../fonts/config_old.json"), "utf8"),
   ).glyphs;
 } catch (error) {
   console.log("No previous config found, assuming first run.");
 }
 const newConfigGlyphs = JSON.parse(
-  fs.readFileSync(path.join(__dirname, "../fonts/config.json"), "utf8")
+  fs.readFileSync(path.join(__dirname, "../fonts/config.json"), "utf8"),
 ).glyphs;
 const addedIcons = newConfigGlyphs
   .filter(({ css }) => !oldConfigGlyphs.some((glyph) => glyph.css === css))
@@ -48,12 +48,15 @@ if (removedIcons.length > 0) {
 fs.writeFileSync(
   path.join(__dirname, "../.github/release/RELEASE_NOTES.md"),
   changes.join("\n"),
-  "utf8"
+  "utf8",
 );
 if (oldConfigGlyphs.length) {
   fs.unlinkSync(path.join(__dirname, "../fonts/config_old.json"));
 }
-fs.unlinkSync(path.join(__dirname, "../fonts/config.json"));
+fs.copyFileSync(
+  path.join(__dirname, "../fonts/config.json"),
+  path.join(__dirname, "../fonts/config_old.json"),
+);
 console.log(
-  `Updated release notes with ${addedIcons.length} added, ${modifiedIcons.length} modified, and ${removedIcons.length} removed icons.`
+  `Updated release notes with ${addedIcons.length} added, ${modifiedIcons.length} modified, and ${removedIcons.length} removed icons.`,
 );
