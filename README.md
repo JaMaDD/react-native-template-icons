@@ -20,6 +20,16 @@ or
 npm install @jamadd/react-native-template-icons
 ```
 
+### Android
+
+No additional steps are required for Android.
+
+### iOS
+
+```sh
+npx rnvi-update-plist package.json ios/YourAppName/Info.plist
+```
+
 ## Usage
 
 ```js
