@@ -45,6 +45,11 @@ if (removedIcons.length > 0) {
     changes.push(`- \`${css}\`\n`);
   });
 }
+if (
+  !fs.existsSync(path.join(__dirname, "../.github/release/RELEASE_NOTES.md"))
+) {
+  fs.mkdirSync(path.join(__dirname, "../.github/release"), { recursive: true });
+}
 fs.writeFileSync(
   path.join(__dirname, "../.github/release/RELEASE_NOTES.md"),
   changes.join("\n"),
