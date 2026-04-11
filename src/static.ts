@@ -16,8 +16,8 @@ import glyphMap from "../glyphmaps/ReactNativeTemplateIcons.json";
 
 export const Icon = createIconSet(glyphMap, {
   postScriptName: "reactnativetemplateicons",
-  fontFileName: "reactnativetemplateicons.ttf",
-  fontSource: require("../fonts/reactnativetemplateicons.ttf"), // eslint-disable-line @typescript-eslint/no-require-imports, global-require
+  fontFileName: "ReactNativeTemplateIcons.ttf",
+  fontSource: require("../fonts/ReactNativeTemplateIcons.ttf"), // eslint-disable-line @typescript-eslint/no-require-imports, global-require
 });
 
 export type IconName = keyof typeof glyphMap;

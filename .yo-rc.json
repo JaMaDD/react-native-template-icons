@@ -1,6 +1,9 @@
 {
   "generator-react-native-vector-icons": {
     "packageName": "react-native-template-icons",
+    "postScriptName": "reactnativetemplateicons",
+    "fontFileName": "ReactNativeTemplateIcons",
+    "className": "ReactNativeTemplateIcons",
     "customReadme": true,
     "customSrc": true,
     "buildSteps": {
