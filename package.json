@@ -51,7 +51,7 @@
     "!**/.*"
   ],
   "scripts": {
-    "clean": "del-cli android/build ios/build lib",
+    "clean": "del-cli android/build ios/build lib && rm -rf node_modules pnpm-lock.yaml && pnpm install",
     "prepare": "bob build && ./scripts/fix-glyphmaps.mjs",
     "watch": "onchange 'src/**' --initial -- pnpm run prepare",
     "generate": "npx yo react-native-vector-icons && node ./scripts/postGenerate.js",
@@ -98,7 +98,7 @@
     "access": "public"
   },
   "dependencies": {
-    "@react-native-vector-icons/common": "13.0.0"
+    "@react-native-vector-icons/common": "13.0.2"
   },
   "devDependencies": {
     "@types/react": "^19.1.0",
