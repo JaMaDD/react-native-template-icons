@@ -19,20 +19,20 @@ importers:
         version: 0.87.1(@babel/core@7.29.7)(@types/react@19.2.18)(react@19.2.8)
     devDependencies:
       '@types/react':
-        specifier: ^19.1.0
+        specifier: ^19.2.18
         version: 19.2.18
       del-cli:
-        specifier: ^6.0.0
-        version: 6.0.0
+        specifier: ^7.0.0
+        version: 7.0.0
       onchange:
         specifier: ^7.1.0
         version: 7.1.0
       react-native-builder-bob:
-        specifier: ^0.35.2
-        version: 0.35.3(typescript@5.9.3)
+        specifier: ^0.35.3
+        version: 0.35.3(typescript@6.0.3)
       typescript:
-        specifier: ^5.7.2
-        version: 5.9.3
+        specifier: ^6.0.3
+        version: 6.0.3
 
 packages:
 
@@ -1008,8 +1008,8 @@ packages:
   dedent@0.7.0:
     resolution: {integrity: sha512-Q6fKUPqnAHAyhiUgFU7BUzLiv0kd8saH9al7tnu5Q/okj6dnupxyTgFIBjVzJATdfIAm9NAsvXNzjaKa+bxVyA==}
 
-  del-cli@6.0.0:
-    resolution: {integrity: sha512-9nitGV2W6KLFyya4qYt4+9AKQFL+c0Ehj5K7V7IwlxTc6RMCfQUGY9E9pLG6e8TQjtwXpuiWIGGZb3mfVxyZkw==}
+  del-cli@7.0.0:
+    resolution: {integrity: sha512-fRl4pWJYu9WFQH8jXdQUYvcD0IMtij9WEc7qmB7xOyJEweNJNuE7iKmqNeoOT1DbBUjtRjxlw8Y63qKBI/NQ1g==}
     engines: {node: '>=18'}
     hasBin: true
 
@@ -1466,9 +1466,9 @@ packages:
   memoize-one@5.2.1:
     resolution: {integrity: sha512-zYiwtZUcYyXKo/np96AGZAckk+FWWsUdJ3cHGGmld7+AhvcWmQyGCYUh1hc4Q/pkOhb65dQR/pqCyK0cOaHz4Q==}
 
-  meow@13.2.0:
-    resolution: {integrity: sha512-pxQJQzB6djGPXh08dacEloMFopsOqGVRKFPYvPOt9XDZ1HasbgDZA74CJGreSU4G3Ak7EFJGoiH2auq+yXISgA==}
-    engines: {node: '>=18'}
+  meow@14.1.0:
+    resolution: {integrity: sha512-EDYo6VlmtnumlcBCbh1gLJ//9jvM/ndXHfVXIFrZVr6fGcwTUyCTFNTLCKuY3ffbK8L/+3Mzqnd58RojiZqHVw==}
+    engines: {node: '>=20'}
 
   merge-stream@2.0.0:
     resolution: {integrity: sha512-abv/qOcuPfk3URPfDzmZU1LKmuw8kT+0nIHvKrKgFrwifol/doWcdA4ZqsWQ8ENrFKkd67Mfpo/LovbIUsbt3w==}
@@ -2069,8 +2069,8 @@ packages:
     resolution: {integrity: sha512-Ne2YiiGN8bmrmJJEuTWTLJR32nh/JdL1+PSicowtNb0WFpn59GK8/lfD61bVtzguz7b3PBt74nxpv/Pw5po5Rg==}
     engines: {node: '>=8'}
 
-  typescript@5.9.3:
-    resolution: {integrity: sha512-jl1vZzPDinLr9eUt3J/t7V6FgNEw9QjvBPdysz9KfQDD41fQrC2Y4vKQdiaUpFT4bXlb1RHhLpp8wtm6M5TgSw==}
+  typescript@6.0.3:
+    resolution: {integrity: sha512-y2TvuxSZPDyQakkFRPZHKFm+KKVqIisdg9/CZwm9ftvKXLP8NRWj38/ODjNbr43SsoXqNuAisEf1GdCxqWcdBw==}
     engines: {node: '>=14.17'}
     hasBin: true
 
@@ -3322,14 +3322,14 @@ snapshots:
       js-yaml: 3.15.2
       parse-json: 4.0.0
 
-  cosmiconfig@9.0.2(typescript@5.9.3):
+  cosmiconfig@9.0.2(typescript@6.0.3):
     dependencies:
       env-paths: 2.2.1
       import-fresh: 3.3.1
       js-yaml: 4.3.2
       parse-json: 5.2.0
     optionalDependencies:
-      typescript: 5.9.3
+      typescript: 6.0.3
 
   cross-spawn@7.0.6:
     dependencies:
@@ -3349,10 +3349,11 @@ snapshots:
 
   dedent@0.7.0: {}
 
-  del-cli@6.0.0:
+  del-cli@7.0.0:
     dependencies:
       del: 8.0.1
-      meow: 13.2.0
+      meow: 14.1.0
+      presentable-error: 0.0.1
 
   del@6.1.1:
     dependencies:
@@ -3796,7 +3797,7 @@ snapshots:
 
   memoize-one@5.2.1: {}
 
-  meow@13.2.0: {}
+  meow@14.1.0: {}
 
   merge-stream@2.0.0: {}
 
@@ -4372,7 +4373,7 @@ snapshots:
 
   react-is@18.3.1: {}
 
-  react-native-builder-bob@0.35.3(typescript@5.9.3):
+  react-native-builder-bob@0.35.3(typescript@6.0.3):
     dependencies:
       '@babel/core': 7.29.7
       '@babel/plugin-transform-strict-mode': 7.29.7(@babel/core@7.29.7)
@@ -4382,7 +4383,7 @@ snapshots:
       '@babel/preset-typescript': 7.29.7(@babel/core@7.29.7)
       babel-plugin-module-resolver: 5.0.3
       browserslist: 4.28.8
-      cosmiconfig: 9.0.2(typescript@5.9.3)
+      cosmiconfig: 9.0.2(typescript@6.0.3)
       cross-spawn: 7.0.6
       dedent: 0.7.0
       del: 6.1.1
@@ -4644,7 +4645,7 @@ snapshots:
 
   type-fest@0.7.1: {}
 
-  typescript@5.9.3: {}
+  typescript@6.0.3: {}
 
   unc-path-regex@0.1.2: {}
 

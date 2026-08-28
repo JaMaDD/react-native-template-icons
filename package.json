@@ -51,7 +51,7 @@
     "!**/.*"
   ],
   "scripts": {
-    "clean": "del-cli android/build ios/build lib && rm -rf node_modules pnpm-lock.yaml && pnpm install",
+    "clean-npm": "del-cli android/build ios/build lib && rm -rf node_modules pnpm-lock.yaml && pnpm install",
     "prepare": "bob build && ./scripts/fix-glyphmaps.mjs",
     "watch": "onchange 'src/**' --initial -- pnpm run prepare",
     "generate": "npx yo react-native-vector-icons && node ./scripts/postGenerate.js",
@@ -101,18 +101,18 @@
     "@react-native-vector-icons/common": "13.0.2"
   },
   "devDependencies": {
-    "@types/react": "^19.1.0",
-    "del-cli": "^6.0.0",
+    "@types/react": "^19.2.18",
+    "del-cli": "^7.0.0",
     "onchange": "^7.1.0",
-    "react-native-builder-bob": "^0.35.2",
-    "typescript": "^5.7.2"
+    "react-native-builder-bob": "^0.35.3",
+    "typescript": "^6.0.3"
   },
   "peerDependencies": {
     "react": "*",
     "react-native": "*"
   },
   "engines": {
-    "node": ">= 18.0.0"
+    "node": ">= 22.0.0"
   },
   "react-native-builder-bob": {
     "source": "src",
