@@ -17,6 +17,6 @@
         "location": "fonts/font/reactnativetemplateicons.ttf"
       }
     },
-    "versions": [{ "rnvi": "0.4.3", "upstream": "0.4.3" }]
+    "versions": [{ "rnvi": "14.0.0", "upstream": "0.5.0" }]
   }
 }

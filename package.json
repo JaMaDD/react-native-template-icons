@@ -98,11 +98,12 @@
     "access": "public"
   },
   "dependencies": {
-    "@react-native-vector-icons/common": "13.0.2"
+    "@react-native-vector-icons/common": "14.0.0"
   },
   "devDependencies": {
     "@types/react": "^19.2.18",
     "del-cli": "^7.0.0",
+    "generator-react-native-vector-icons": "^14.0.0",
     "onchange": "^7.1.0",
     "react-native-builder-bob": "^0.35.3",
     "typescript": "^6.0.3"
